@@ -176,6 +176,10 @@ class Pipe:
             pipe.centerx -= 2.75
         return self.pipe_list
 
+    
+    class FUCKYOU:
+        
+        pass
 
 if __name__ == '__main__':
     game = Game()
