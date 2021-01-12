@@ -84,10 +84,10 @@ class Surfaces:
         self.display = pygame.Surface
         self.floor_x_pos = 0
         self.high_score = 0
-        self.font = pygame.font.Font("flappy-bird-assets-master/04B_19.TTF", 40)
-        self.blocks = [transform(load("flappy-bird-assets-master/sprites/background-day.png")),
-                       transform(load("flappy-bird-assets-master/sprites/base.png")),
-                       transform(load("flappy-bird-assets-master/sprites/gameover.png"))]
+        self.font = pygame.font.Font("sprites/04B_19.TTF", 40)
+        self.blocks = [transform(load("sprites/background-day.png")),
+                       transform(load("sprites/base.png")),
+                       transform(load("sprites/gameover.png"))]
 
     def fade(self):
         pass
@@ -120,9 +120,9 @@ class Bird:
         self.up = 10
         self.gravity = 0.25
         self.flaps = pygame.USEREVENT + 1
-        self.block = [load("flappy-bird-assets-master/sprites/yellowbird-midflap.png"),
-                      load("flappy-bird-assets-master/sprites/yellowbird-downflap.png"),
-                      load("flappy-bird-assets-master/sprites/yellowbird-upflap.png")]
+        self.block = [load("sprites/yellowbird-midflap.png"),
+                      load("sprites/yellowbird-downflap.png"),
+                      load("sprites/yellowbird-upflap.png")]
 
     def rotation(self):
         new_bird = pygame.transform.rotozoom(self.block[self.idx], -self.movement * 2.85, 1)
@@ -152,7 +152,7 @@ class Pipe:
 
     def __init__(self):
         self.pipe = Surfaces()
-        self.pipe_surface = transform(load("flappy-bird-assets-master/sprites/pipe-green.png"))
+        self.pipe_surface = transform(load("sprites/pipe-green.png"))
         self.pipe_list = []
 
     def get_rec(self):
